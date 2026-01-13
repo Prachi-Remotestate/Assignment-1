@@ -25,7 +25,7 @@
     <div class="profile">
       <div class="profile-left">
         <div class="avatar">
-          <img src="assets/img14.jpg" alt="User">
+          <img src="assets/Usercard_icon.svg" alt="User">
         </div>
         <div class="user-info">
           <p class="name">Jessica Thompson</p>
@@ -39,11 +39,11 @@
 
    
     <nav class="menu">
-      <a href="#"><img src="assets/img12.jpg" alt=""> Home</a>
-      <a href="#" class="active"><img src="assets/img15.jpg" alt=""> Documents</a>
-      <a href="#"><img src="assets/img9.jpg" alt=""> Chat with Neptune</a>
-      <a href="#"><img src="assets/img13.jpg" alt=""> Help</a>
-      <a href="#"><img src="assets/img7.jpg" alt=""> Settings</a>
+      <a href="#"><img src="assets/home_icon.svg" alt=""> Home</a>
+      <a href="#" class="active"><img src="assets/document_icon.svg" alt=""> Documents</a>
+      <a href="#"><img src="assets/chat_icon.svg" alt=""> Chat with Neptune</a>
+      <a href="#"><img src="assets/help_icon.svg" alt=""> Help</a>
+      <a href="#"><img src="assets/settings_icon.svg" alt=""> Settings</a>
     </nav>
 
     
@@ -72,197 +72,172 @@
 
 <div class="page-header">
   <h1>My Documents</h1>
-
+ 
+  <div class="header-right">
+    <button class="action-btn primary">Add</button>
   <div class="search-box">
     <input type="text" placeholder="Search documents">
     <span class="search-icon"><img src="/assets/Vector.svg"></span>
   </div>
 </div>
-
+</div>
 <div class="documents-grid">
-  <div class="doc-grid header">
-    <div class="cell checkbox-cell">
-      <input type="checkbox">
-      <img src="assets/im6.jpg" alt="arrow">
-    </div>
-    <div>Document Name</div>
-    <div>Status</div>
-    <div>Last Modified</div>
-  </div>
 
- 
-  <div class="doc-grid row">
-    <div class="cell checkbox-cell">
-      <input type="checkbox">
-    </div>
+  <table class="documents-table">
+    <thead>
+      <tr>
+        <th class="col-check">
+          <input type="checkbox">
+          <img src="assets/im6.jpg" alt="arrow">
+        </th>
+        <th>Document Name</th>
+        <th>Status</th>
+        <th>Last Modified</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
 
-    <div class="doc-name">
-      Title of Document Goes Here
-    </div>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td class="doc-name">Title of Document Goes Here</td>
+        <td><span class="status signing">Needs Signing</span></td>
+        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
+        <td><button class="action-btn primary">Sign now</button></td>
+            <td class="more-cell">
+  <div class="more-wrapper">
+    <button class="more-btn">
+      <img src="assets/threeDot_icon.svg" alt="more">
+    </button>
 
-    <div>
-      <span class="status signing">Needs Signing</span>
-    </div>
-
-    <div class="date">
-      10/22/2024<br>
-      <span>2:01 pm</span>
-    </div>
-
-    <div>
-      <button class="action-btn primary">Sign now</button>
-    </div>
-
-    <div class="more">
-      <img src="assets/img2.jpg" alt="menu">
+    <div class="more-dropdown">
+      <button>Edit</button>
+      <button class="delete">Delete</button>
     </div>
   </div>
-  
-<div class="doc-grid row">
-  <div class="cell checkbox-cell">
-    <input type="checkbox">
+</td>
+      </tr>
+
+      <tr>
+        <td><input type="checkbox"></td>
+        <td class="doc-name">Title of Document Goes Here</td>
+        <td>
+          <span class="status pending">Pending</span>
+          <div class="status-sub">
+            <i>Waiting for <strong style="color:#436D7C;">1 person</strong></i>
+          </div>
+        </td>
+        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
+        <td><button class="action-btn secondary">Preview</button></td>
+             <td class="more-cell">
+  <div class="more-wrapper">
+    <button class="more-btn">
+      <img src="assets/threeDot_icon.svg" alt="more">
+    </button>
+
+    <div class="more-dropdown">
+      <button>Edit</button>
+      <button class="delete">Delete</button>
+    </div>
   </div>
+</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td class="doc-name">Title of Document Goes Here</td>
+        <td>
+          <span class="status pending">Pending</span>
+          <div class="status-sub">
+            <i>Waiting for <strong style="color:#436D7C;">2 person</strong></i>
+          </div>
+        </td>
+        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
+        <td><button class="action-btn secondary">Preview</button></td>
+            <td class="more-cell">
+  <div class="more-wrapper">
+    <button class="more-btn">
+      <img src="assets/threeDot_icon.svg" alt="more">
+    </button>
 
-  <div class="doc-name">
-    Title of Document Goes Here
+    <div class="more-dropdown">
+      <button>Edit</button>
+      <button class="delete">Delete</button>
+    </div>
   </div>
+</td>
+      </tr>
 
-  <div>
-    <span class="status pending">Pending</span>
-    <div class="status-sub"><i>Waiting for  <strong style ="color:#436D7C;">1 person</strong> </i></div>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td class="doc-name">Title of Document Goes Here</td>
+        <td><span class="status completed">Completed</span></td>
+        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
+        <td><button class="action-btn secondary">Download PDF</button></td>
+            <td class="more-cell">
+  <div class="more-wrapper">
+    <button class="more-btn">
+      <img src="assets/threeDot_icon.svg" alt="more">
+    </button>
+
+    <div class="more-dropdown">
+      <button>Edit</button>
+      <button class="delete">Delete</button>
+    </div>
   </div>
+</td>
+      </tr>
 
-  <div class="date">
-    10/22/2024<br>
-    <span>2:01 pm</span>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td class="doc-name">Title of Document Goes Here</td>
+        <td><span class="status completed">Completed</span></td>
+        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
+        <td><button class="action-btn secondary">Download PDF</button></td>
+             <td class="more-cell">
+  <div class="more-wrapper">
+    <button class="more-btn">
+      <img src="assets/threeDot_icon.svg" alt="more">
+    </button>
+
+    <div class="more-dropdown">
+      <button>Edit</button>
+      <button class="delete">Delete</button>
+    </div>
   </div>
+</td>
+      </tr>
 
-  <div>
-    <button class="action-btn secondary">Preview</button>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td class="doc-name">Title of Document Goes Here</td>
+        <td><span class="status completed">Completed</span></td>
+        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
+        <td><button class="action-btn secondary">Download PDF</button></td>
+        <td class="more-cell">
+  <div class="more-wrapper">
+    <button class="more-btn">
+      <img src="assets/threeDot_icon.svg" alt="more">
+    </button>
+
+    <div class="more-dropdown">
+      <button>Edit</button>
+      <button class="delete">Delete</button>
+    </div>
   </div>
+</td>
 
-  <div class="more">
-    <img src="assets/img2.jpg">
-  </div>
-</div>
+      </tr>
 
-
-<div class="doc-grid row">
-  <div class="cell checkbox-cell">
-    <input type="checkbox">
-  </div>
-
-  <div class="doc-name">
-    Title of Document Goes Here
-  </div>
-
-  <div>
-    <span class="status pending">Pending</span>
-    <div class="status-sub"><i>Waiting for  <strong style ="color:#436D7C;">2 person</strong> </i></div>
-  </div>
-
-  <div class="date">
-    10/22/2024<br>
-    <span>2:01 pm</span>
-  </div>
-
-  <div>
-    <button class="action-btn secondary">Preview</button>
-  </div>
-
-  <div class="more">
-    <img src="assets/img2.jpg">
-  </div>
-</div>
-
-
-<div class="doc-grid row">
-  <div class="cell checkbox-cell">
-    <input type="checkbox">
-  </div>
-
-  <div class="doc-name">
-    Title of Document Goes Here
-  </div>
-
-  <div>
-    <span class="status completed">Completed</span>
-  </div>
-
-  <div class="date">
-    10/22/2024<br>
-    <span>2:01 pm</span>
-  </div>
-
-  <div>
-    <button class="action-btn secondary">Download PDF</button>
-  </div>
-
-  <div class="more">
-    <img src="assets/img2.jpg">
-  </div>
-</div>
-
-
-<div class="doc-grid row">
-  <div class="cell checkbox-cell">
-    <input type="checkbox">
-  </div>
-
-  <div class="doc-name">
-    Title of Document Goes Here
-  </div>
-
-  <div>
-    <span class="status completed">Completed</span>
-  </div>
-
-  <div class="date">
-    10/22/2024<br>
-    <span>2:01 pm</span>
-  </div>
-
-  <div>
-    <button class="action-btn secondary">Download PDF</button>
-  </div>
-
-  <div class="more">
-    <img src="assets/img2.jpg">
-  </div>
-</div>
-<div class="doc-grid row">
-  <div class="cell checkbox-cell">
-    <input type="checkbox">
-  </div>
-
-  <div class="doc-name">
-    Title of Document Goes Here
-  </div>
-
-  <div>
-    <span class="status completed">Completed</span>
-  </div>
-
-  <div class="date">
-    10/22/2024<br>
-    <span>2:01 pm</span>
-  </div>
-
-  <div>
-    <button class="action-btn secondary">Download PDF</button>
-  </div>
-
-  <div class="more">
-    <img src="assets/img2.jpg">
-  </div>
-</div>
+    </tbody>
+  </table>
 
 </div>
 
 
-</div>
 
-  </main>
+</div>
+</main>
 
 </div>
 
