@@ -15,7 +15,7 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns:25% 1fr ;
   min-height: 100vh;
 }
 
@@ -26,15 +26,25 @@ body {
   border-right: 1px solid #EBEBEB;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;       
+  min-height: 100vh;
+  overflow: hidden; 
   
+}
+
+.menu {
+  flex-shrink: 0;
+}
+
+.profile {
+  flex-shrink: 0;
 }
 
 
 
-
 .logo {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  padding-right: 20px;
 }
 
 .logo-img img {
@@ -132,13 +142,13 @@ body {
 }
 
 .help-title {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
 .help-text {
-  font-size: 13px;
+  font-size: 16px;
   color: #555;
   margin-bottom: 12px;
   line-height: 1.4;
@@ -157,7 +167,7 @@ body {
 
 .main-content {
   padding: 0 20px;
-  max-width:1084px;
+  max-width: 1100px;
   margin: 40px auto;
 
 }
@@ -246,10 +256,8 @@ body {
 
 
 .documents-grid {
-  width: 100%;
-  max-width: 1084px;
   height: auto;
-  max-height: 430px;
+  max-height: auto;
   background: #ffffff;
   border: 0.5px solid #e4e7ec;
   border-radius: 8px;
@@ -260,9 +268,10 @@ body {
 
 
 .documents-table {
-  width: 100%;
+ width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+
+  table-layout: auto;   
 }
 
 
@@ -276,6 +285,13 @@ body {
   padding: 0 10px;
 }
 
+.documents-table th:first-child {
+  display: flex;
+  align-items: center;   
+  gap: 8px;              
+}
+
+
 
 .documents-table tbody tr {
   height: 56px;                 
@@ -288,30 +304,51 @@ body {
 
 
 .documents-table td {
-  padding: 0 10px;              
-  vertical-align: middle;
-  font-size: 14px;               
+ 
+  white-space: nowrap;      /* keep rows aligned */
+ 
+  text-overflow: ellipsis;
+
+              
+}
+
+.documents-table th,
+.documents-table td {
+  padding: 0px 20px;   
 }
 
 
-.col-check { width: 60px; }
+.col-check {
+  width: 48px;
+  min-width: 48px;
+  text-align: center;
+}
+
 
 .documents-table th:nth-child(2),
-.documents-table td:nth-child(2) { width: 36%; }
+.documents-table td:nth-child(2) {
+  white-space: normal;
+  line-height: 1.4;
+  font-weight: 500;
+}
+ 
 
 .documents-table th:nth-child(3),
-.documents-table td:nth-child(3) { width: 18%; }
+.documents-table td:nth-child(3) {   white-space: nowrap; }
 
 .documents-table th:nth-child(4),
-.documents-table td:nth-child(4) { width: 18%; }
+.documents-table td:nth-child(4) { white-space: nowrap;
+  color: #667085;}
 
 .documents-table th:nth-child(5),
-.documents-table td:nth-child(5) { width: 16%; }
+.documents-table td:nth-child(5) { white-space: nowrap;; }
 
 .documents-table th:nth-child(6),
-.documents-table td:nth-child(6) { width: 6%; }
+.documents-table td:nth-child(6) { width: 48px;
+  min-width: 48px;
+  text-align: center; }
 
-/* ================= CONTENT STYLES ================= */
+
 
 .doc-name {
   font-weight: 600;
@@ -373,7 +410,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+ flex-shrink: 0;
   font-size: 12px;
   font-family: 'Spline Sans', sans-serif;
   font-weight: 500;
