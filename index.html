@@ -22,20 +22,26 @@
     </div>
 
    
-    <div class="profile">
-      <div class="profile-left">
-        <div class="avatar">
-          <img src="assets/Usercard_icon.svg" alt="User">
-        </div>
-        <div class="user-info">
-          <p class="name">Jessica Thompson</p>
-          <span>Primary User</span>
-        </div>
-      </div>
-
-    
-      <div class="dropdown-icon"><img src="assets/im6.jpg"></div>
+  <div class="profile">
+  <div class="profile-left">
+    <div class="avatar">
+      <img src="assets/Usercard_icon.svg" alt="User">
     </div>
+    <div class="user-info">
+      <p class="name">Jessica Thompson</p>
+      <span>Primary User</span>
+    </div>
+  </div>
+
+  <button class="profile-toggle">
+    <img src="assets/im6.jpg" alt="toggle">
+  </button>
+
+  <!-- Dropdown -->
+  <div class="profile-dropdown">
+    <button class="logout-btn">Logout</button>
+  </div>
+</div>
 
    
     <nav class="menu">
@@ -64,19 +70,20 @@
 <main class="main-content">
    
 <div class="breadcrumb">
-  <span>Home</span>
+  <a class="bread-link" href="#"><span>Home</span></a>
   <span class="separator"><img src="assets/chevron-right.svg"></span>
-  <span class="current">Documents</span>
+ <a class="bread-link" href="#"> <span class="current">Documents</span></a>
 </div>
+
 
 
 <div class="page-header">
   <h1>My Documents</h1>
  
   <div class="header-right">
-    <button class="action-btn primary">Add</button>
+    <button class="header-btn  btn-outline">Add</button>
   <div class="search-box">
-    <input type="text" placeholder="Search documents">
+    <input type="text"  id="searchInput" placeholder="Search documents">
     <span class="search-icon"><img src="/assets/Vector.svg"></span>
   </div>
 </div>
@@ -86,151 +93,99 @@
   <table class="documents-table">
     <thead>
       <tr>
-        <th class="col-check">
-          <input type="checkbox">
-          <img src="assets/im6.jpg" alt="arrow">
-        </th>
+       <th class="col-check">
+  <div class="check-head">
+    <input type="checkbox" />
+    <span class="sort-arrow"><img src="/assets/Icon Right.png"></span>
+  </div>
+</th>
+
         <th>Document Name</th>
-        <th>Status</th>
+       
+        <th class="status-th">
+         Status
+       <select id="statusFilter">
+    <option value="all">select</option>
+    <option value="Pending">Pending</option>
+    <option value="Needs Signing">Needs Signing</option>
+    <option value="Completed">Completed</option>
+    </select>
+    </th> 
         <th>Last Modified</th>
-        <th></th>
-        <th></th>
+        <th class="action-th"></th>
+        <th class="more-th"></th>
       </tr>
     </thead>
 
-    <tbody>
+    <tbody id="documentsBody">
       <tr>
         <td><input type="checkbox"></td>
         <td class="doc-name">Title of Document Goes Here</td>
         <td><span class="status signing">Needs Signing</span></td>
         <td class="date">10/22/2024<br><span>2:01 pm</span></td>
-        <td><button class="action-btn primary">Sign now</button></td>
+        <div class="centre-btn">
+        <td><button class="action-btn ">Sign now</button></td>
         <td class="more-cell">
   <div class="more-wrapper">
     <button class="more-btn">
       <img src="assets/threeDot_icon.svg" alt="more">
     </button>
 
-    <div class="more-dropdown">
+    <div class="dropdown">
       <button>Edit</button>
       <button class="delete">Delete</button>
     </div>
   </div>
 </td>
+</div>
       </tr>
 
-      <tr>
-        <td><input type="checkbox"></td>
-        <td class="doc-name">Title of Document Goes Here</td>
-        <td>
-          <span class="status pending">Pending</span>
-          <div class="status-sub">
-            <i>Waiting for <strong style="color:#436D7C;">1 person</strong></i>
-          </div>
-        </td>
-        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
-        <td><button class="action-btn secondary">Preview</button></td>
-             <td class="more-cell">
-  <div class="more-wrapper">
-    <button class="more-btn">
-      <img src="assets/threeDot_icon.svg" alt="more">
-    </button>
-
-    <div class="more-dropdown">
-      <button>Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
-</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td class="doc-name">Title of Document Goes Here</td>
-        <td>
-          <span class="status pending">Pending</span>
-          <div class="status-sub">
-            <i>Waiting for <strong style="color:#436D7C;">2 person</strong></i>
-          </div>
-        </td>
-        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
-        <td><button class="action-btn secondary">Preview</button></td>
-            <td class="more-cell">
-  <div class="more-wrapper">
-    <button class="more-btn">
-      <img src="assets/threeDot_icon.svg" alt="more">
-    </button>
-
-    <div class="more-dropdown">
-      <button>Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
-</td>
-      </tr>
-
-      <tr>
-        <td><input type="checkbox"></td>
-        <td class="doc-name">Title of Document Goes Here</td>
-        <td><span class="status completed">Completed</span></td>
-        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
-        <td><button class="action-btn secondary">Download PDF</button></td>
-            <td class="more-cell">
-  <div class="more-wrapper">
-    <button class="more-btn">
-      <img src="assets/threeDot_icon.svg" alt="more">
-    </button>
-
-    <div class="more-dropdown">
-      <button>Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
-</td>
-      </tr>
-
-      <tr>
-        <td><input type="checkbox"></td>
-        <td class="doc-name">Title of Document Goes Here</td>
-        <td><span class="status completed">Completed</span></td>
-        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
-        <td><button class="action-btn secondary">Download PDF</button></td>
-             <td class="more-cell">
-  <div class="more-wrapper">
-    <button class="more-btn">
-      <img src="assets/threeDot_icon.svg" alt="more">
-    </button>
-
-    <div class="more-dropdown">
-      <button>Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
-</td>
-      </tr>
-
-      <tr>
-        <td><input type="checkbox"></td>
-        <td class="doc-name">Title of Document Goes Here</td>
-        <td><span class="status completed">Completed</span></td>
-        <td class="date">10/22/2024<br><span>2:01 pm</span></td>
-        <td><button class="action-btn secondary">Download PDF</button></td>
-        <td class="more-cell">
-  <div class="more-wrapper">
-    <button class="more-btn">
-      <img src="assets/threeDot_icon.svg" alt="more">
-    </button>
-
-    <div class="more-dropdown">
-      <button>Edit</button>
-      <button class="delete">Delete</button>
-    </div>
-  </div>
-</td>
-
-      </tr>
 
     </tbody>
   </table>
+<!-- Add Document Modal -->
+<div class="modal-overlay" id="docModal">
+  <div class="modal">
+    <h3 class="form-head">Add Document</h3>
+
+    <form id="docForm">
+      <div class="form-group">
+        <label>Document Title</label>
+        <input type="text" id="docTitle" placeholder="Enter document title" />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>Status</label>
+        <select id="docStatus">
+          <option value="">Select status</option>
+          <option value="Needs Signing">Needs Signing</option>
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <div class="form-group" id="waitingGroup" style="display:none;">
+      <label>Waiting for (persons)</label>
+     <input
+     type="number"
+     id="waitingCount"
+     min="1"
+     placeholder="Enter number of persons"
+  />
+  <small class="error" id="waitingError"></small>
+</div>
+
+        <small class="error"></small>
+      </div>
+
+      
+
+      <div class="form-actions">
+        <button type="button" id="cancelBtn" class="header-btn">Cancel</button>
+        <button type="submit" class="header-btn">Add</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 </div>
 
@@ -240,6 +195,6 @@
 </main>
 
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
