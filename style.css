@@ -47,7 +47,7 @@ body {
   justify-content: space-between;
 }
 
-/* arrow button */
+
 .profile-toggle {
   background: none;
   border: none;
@@ -55,7 +55,6 @@ body {
   padding: 4px;
 }
 
-/* dropdown card */
 .profile-dropdown {
   position: absolute;
   top: calc(100% + 8px);
@@ -71,7 +70,6 @@ body {
   z-index: 10;
 }
 
-/* show state */
 .profile-dropdown.active {
   display: block;
 }
@@ -347,15 +345,15 @@ more-th{
 }
 
 .documents-table th:nth-child(2) {
-  padding-left: 15px; /* adjust 8–16px if needed */
+  padding-left: 15px; 
 }
 
 .documents-table th:nth-child(3) {
-  padding-left: 16px; /* adjust 8–16px if needed */
+  padding-left: 16px; 
 }
 
 .documents-table th:nth-child(4) {
-  padding-left: 15px; /* adjust 8–16px if needed */
+  padding-left: 15px; 
 }
 
 td{
@@ -554,7 +552,6 @@ thead{
 } 
 
 
-/* ACTIVE STATE */
 .action-cell.open .more-menu {
   display: block;
 } */
@@ -565,7 +562,7 @@ thead{
 }
 
 
-/* form design */
+
 .modal-overlay {
   position: fixed;
   inset: 0;

@@ -138,14 +138,14 @@ function renderTable() {
 </td>
 
 
-       <!-- ✅ ACTION COLUMN -->
+       
   <td class="action-cell">
     <button class="action-btn">
       ${getActionText(doc.status)}
     </button>
   </td>
 
-  <!-- ✅ MORE COLUMN -->
+ 
   <td class="more-cell">
     <div class="more-wrapper">
       <button class="more-btn">
@@ -191,7 +191,7 @@ function getCurrentDateTime() {
   return { date, time };
 }
 
-// ================= EDIT =================
+//edit
 function editDoc(index) {
   const doc = documents[index];
   editIndex = index;
@@ -261,7 +261,7 @@ searchInput.addEventListener("input", () => {
 });
 
 
-//ssearch byy status
+//search byy status
 
 const statusFilter = document.getElementById("statusFilter");
 
